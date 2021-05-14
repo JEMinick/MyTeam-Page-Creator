@@ -1,13 +1,9 @@
-let bDebugging = true;
+let bDebugging = false;
 let bError = false;
 
 // npm packages
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const path = require('path');
-
-// Sent to output folder
-// const outputPath = path.resolve(__dirname, 'output', 'index.html');
 
 // Classes
 const Manager = require('./lib/manager');
@@ -131,6 +127,15 @@ const runApp = () => {
           },
         },
         {
+          type: 'list',
+          name: 'engineerLevel',
+          message: 'Specify the Engineers level:',
+          choices: [
+            'Senior Engineer',
+            'Junior Engineer'
+          ],
+        },
+        {
           type: 'input',
           name: 'engineerId',
           message: 'Enter engineers id:',
@@ -161,6 +166,7 @@ const runApp = () => {
       .then( response => {
         const engineerInfo = new Engineer (
           response.engineerName,
+          response.engineerLevel,
           response.engineerId,
           response.engineerEmail,
           response.engineerGithub

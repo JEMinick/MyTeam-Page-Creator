@@ -56,7 +56,8 @@ describe( "Engineer Object", () =>
       const sEmpEmail = "john@idk.com"
       const sRole = 'Engineer';
       const sGithubID = 'JohnOnGithub';
-      const e = new Engineer( sName, iEmpID, sEmpEmail, sGithubID );
+      const sEngineerLevel = "unknown";
+      const e = new Engineer( sName, sEngineerLevel, iEmpID, sEmpEmail, sGithubID );
 
       // Act:
 
@@ -66,6 +67,7 @@ describe( "Engineer Object", () =>
       expect(e.getEmployeeEmail()).toEqual(sEmpEmail);
       expect(e.getEmployeeRole()).toEqual(sRole);
       expect(e.getEmployeeGithub()).toEqual(sGithubID);
+      expect(e.isSeniorEngineer()).toEqual(false);
     });
 
     // Negative test
@@ -76,7 +78,8 @@ describe( "Engineer Object", () =>
       const sEmpEmail = "john@idk.com"
       const sRole = 'Engineer';
       const sGithubID = 'JohnOnGithub';
-      const e = new Engineer( sName, iEmpID, sEmpEmail, sGithubID );
+      const sEngineerLevel = "unknown";
+      const e = new Engineer( sName, sEngineerLevel, iEmpID, sEmpEmail, sGithubID );
 
       // Act:
 
@@ -98,7 +101,8 @@ describe( "Engineer Object", () =>
       const sRole = 'Engineer';
       const sGithubID = "JohnOnGithub";
       const sNewGithubID = "JohnnyEngineer";
-      const e = new Engineer( sName, iEmpID, sEmpEmail, sGithubID );
+      const sEngineerLevel = "Senior";
+      const e = new Engineer( sName, sEngineerLevel, iEmpID, sEmpEmail, sGithubID );
 
       // Act:
       e.setEmployeeName( sNewName );
@@ -120,14 +124,14 @@ describe( "Engineer Object", () =>
       const iEmpID = 1234;
       const sEmpEmail = "john@idk.com"
       const sRole = 'Engineer';
-      const sGithubID = 'JohnnyEngineer'
-      const e = new Engineer( sName, iEmpID, sEmpEmail, sGithubID );
+      const sGithubID = 'JohnnyEngineer';
+      const e = new Engineer( sName, "", iEmpID, sEmpEmail, sGithubID );
 
       // Act:
       e.setEmployeeId(0);
 
       // Assert:
-      expect(e.isMissingKeyInformation()).toEqual(true);
+      expect(e.isSeniorEngineer()).toEqual(false);
     });
 
   });
