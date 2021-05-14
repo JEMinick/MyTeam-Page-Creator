@@ -13,17 +13,17 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "jest --watchall"
+    "test": "jest"
   },
   "author": "James E. Minick",
   "license": "ISC",
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JEMinick/Employee-Info.git"
+    "url": "git+https://github.com/JEMinick/MyTeam-Page-Creator.git"
   },
   "bugs": {
-    "url": "https://github.com/JEMinick/Employee-Info/issues"
+    "url": "https://github.com/JEMinick/MyTeam-Page-Creator/issues"
   },
-  "homepage": "https://github.com/JEMinick/Employee-Info#readme"
+  "homepage": "https://github.com/JEMinick/MyTeam-Page-Creator#readme"
 }
