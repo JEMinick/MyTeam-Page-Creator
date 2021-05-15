@@ -35,7 +35,8 @@ describe( "Engineer Object", () =>
 
   describe( "Engineer Initialization with data", () => {
   
-    it( "Can set name during construction", () => {
+    // Positive Tests
+    it( "Can can construct with just an employeee name", () => {
       // Arrange:
       const sRole = 'Engineer';
       const sName = 'John';
@@ -49,7 +50,7 @@ describe( "Engineer Object", () =>
     });
 
     // Positive Tests
-    it( "should create an instance of Engineer with all data and retrieve it", () => {
+    it( "should create an instance of an Engineer with all data and retrieve it", () => {
       // Arrange:
       const sName = "John";
       const iEmpID = 1234;
@@ -60,6 +61,7 @@ describe( "Engineer Object", () =>
       const e = new Engineer( sName, sEngineerLevel, iEmpID, sEmpEmail, sGithubID );
 
       // Act:
+      e.setEngineerLevel("Senior");
 
       // Assert:
       expect(e.getEmployeeName()).toEqual(sName);
@@ -67,7 +69,7 @@ describe( "Engineer Object", () =>
       expect(e.getEmployeeEmail()).toEqual(sEmpEmail);
       expect(e.getEmployeeRole()).toEqual(sRole);
       expect(e.getEmployeeGithub()).toEqual(sGithubID);
-      expect(e.isSeniorEngineer()).toEqual(false);
+      expect(e.isSeniorEngineer()).toEqual(true);
     });
 
     // Negative test
@@ -132,6 +134,7 @@ describe( "Engineer Object", () =>
 
       // Assert:
       expect(e.isSeniorEngineer()).toEqual(false);
+      expect(e.isMissingKeyInformation()).toEqual(true);
     });
 
   });
