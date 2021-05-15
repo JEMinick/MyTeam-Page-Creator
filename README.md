@@ -22,8 +22,11 @@ The problem being addressed and resolved with this app is to create a simple web
 By creating this app, I learned the following: creating objects that can inherit from a base class and creating tests that can be run from a command-line prompt.
 
 ## Video:
-If you would like to view a short video demonstrating the use of this tool, visit:
+If you would like to view a short video demonstrating the use of this tool, visit:</br>
 [MyTeam-Page-Creator](https://youtu.be/heniALXRpV8)
+
+## Sample Output:
+[MyTeam-Page-Creator](./assets/index.html)
 
 ## Installation
 <a name="installation"></a>
