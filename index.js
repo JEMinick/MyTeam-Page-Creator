@@ -31,7 +31,7 @@ const runApp = () => {
         message: 'What is the Managers name?',
         validate(value) {
           const valid = isNaN(value);
-          return valid || 'Please enter a name.';
+          return valid || 'Please enter a name...';
         },
       },
       {
@@ -40,7 +40,7 @@ const runApp = () => {
         message: 'What is the Managers employee id?',
         validate(value) {
           const valid = !isNaN(parseInt(value));
-          return valid || 'Please enter a number.';
+          return valid || 'Please enter a number...';
         },
       },
       {
@@ -49,7 +49,7 @@ const runApp = () => {
         message: 'What is the managers email?',
         validate(value) {
           const valid = isNaN(value);
-          return valid || 'Please enter an email.';
+          return valid || 'Please enter an email address...';
         },
       },
       {
@@ -58,7 +58,7 @@ const runApp = () => {
         message: 'What is the office number for the manager?',
         validate(value) {
           const valid = !isNaN(parseInt(value));
-          return valid || 'Please enter a number.';
+          return valid || 'Please enter a number...';
         },
       },
     ])
@@ -123,7 +123,7 @@ const runApp = () => {
           message: 'Enter engineers name:',
           validate(value) {
             const valid = isNaN(value);
-            return valid || 'Please enter a name.';
+            return valid || 'Please enter a name...';
           },
         },
         {
@@ -140,8 +140,8 @@ const runApp = () => {
           name: 'engineerId',
           message: 'Enter engineers id:',
           validate(value) {
-            const valid = !isNaN(parseFloat(value));
-            return valid || 'Please enter a number.';
+            const valid = !isNaN(parseInt(value));
+            return valid || 'Please enter a number...';
           },
         },
         {
@@ -150,7 +150,7 @@ const runApp = () => {
           message: 'Enter engineers email:',
           validate(value) {
             const valid = isNaN(value);
-            return valid || 'Please enter an email.';
+            return valid || 'Please enter an email address...';
           },
         },
         {
@@ -159,7 +159,7 @@ const runApp = () => {
           message: 'Enter GitHub username:',
           validate(value) {
             const valid = isNaN(value);
-            return valid || 'Please enter a username.';
+            return valid || 'Please enter a username on GitHub...';
           },
         },
       ])
@@ -188,7 +188,7 @@ const runApp = () => {
           message: 'Enter interns name:',
           validate(value) {
             const valid = isNaN(value);
-            return valid || 'Please enter a name.';
+            return valid || 'Please enter a name...';
           },
         },
         {
@@ -196,8 +196,8 @@ const runApp = () => {
           name: 'internId',
           message: 'Enter interns Id:',
           validate(value) {
-            const valid = !isNaN(parseFloat(value));
-            return valid || 'Please enter a number.';
+            const valid = !isNaN(parseInt(value));
+            return valid || 'Please enter a number...';
           },
         },
         {
@@ -206,7 +206,7 @@ const runApp = () => {
           message: 'Enter interns email:',
           validate(value) {
             const valid = isNaN(value);
-            return valid || 'Please enter an email.';
+            return valid || 'Please enter an email address...';
           },
         },
         {
@@ -215,7 +215,7 @@ const runApp = () => {
           message: 'Enter interns school:',
           validate(value) {
             const valid = isNaN(value);
-            return valid || 'Please enter a school.';
+            return valid || 'Please enter the name of the interns school...';
           },
         },
       ])
