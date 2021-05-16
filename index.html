@@ -18,6 +18,8 @@
 
     :root {
         --border-radius: 10px;
+        --min-card-width: 320px;
+        --max-card-width: 360px;
         --primary-font-clr: white;
         --primary-bg-clr: lightgray;
         --shadow-color: rgb(150, 145, 145);
@@ -65,10 +67,13 @@
       background-color: var(primary-bg-clr);
     }
     
+    .card-size {
+        min-width: var(--min-card-width);
+        max-width: var(--max-card-width);
+    }
     .card-header {
         background-color: var(--card-hdr-bg);
         box-shadow: 10px 10px 5px var(--shadow-color);
-        min-width: 300px;
     }
     .card-header:first-child {
         border-top-left-radius: var(--border-radius);
@@ -79,7 +84,6 @@
         border-bottom-left-radius: var(--border-radius);
         border-bottom-right-radius: var(--border-radius);
         box-shadow: 10px 10px 5px var(--shadow-color);
-        min-width: 300px;
     }
     
     @media screen and (max-width: 720px)
@@ -114,71 +118,86 @@
 
         <div class="row d-flex justify-content-center mt-2 mb-3">
             
-  <div class="col mt-2 mb-2 mr-3">
-    <div class="card-header">
-        <h2 class="card-title">Managing Ed</h2>
-        <h3 class="card-title"><i class="fas fa-tasks mr-2"></i>Manager</h3>
-    </div>
-    <div class="card-body">
-        <ul class="list-group">
-        <li class="list-group-item">ID: 1122</li>
-        <li class="list-group-item">Email: <a href="mailto:mgr.ed@idk.com">mgr.ed@idk.com</a></li>
-        <li class="list-group-item">Office number: 2211</li>
-        </ul>
-    </div>
-  </div>
-  <div class="col mt-2 mb-2 mr-3">
-    <div class="card-header">
-        <h2 class="card-title">Ed</h2>
-        <h3 class="card-title"><i class="fas fa-chalkboard-teacher mr-2"></i>Engineer</h3>
-    </div>
-    <div class="card-body">
-        <ul class="list-group">
-        <li class="list-group-item">ID: 1122-1</li>
-        <li class="list-group-item">Email: <a href="mailto:eng.ed@idk.com">eng.ed@idk.com</a></li>
-        <li class="list-group-item">GitHub: <a href="https://github.com/EngEd-GH">EngEd-GH</a></li>
-        </ul>
-    </div>
-  </div>
-  <div class="col mt-2 mb-2 mr-3">
-    <div class="card-header">
-        <h2 class="card-title">James</h2>
-        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
-    </div>
-    <div class="card-body">
-        <ul class="list-group">
-        <li class="list-group-item">ID: 1122-2</li>
-        <li class="list-group-item">Email: <a href="mailto:int.james@idk.com">int.james@idk.com</a></li>
-        <li class="list-group-item">School: Engineers-School</li>
-        </ul>
-    </div>
-  </div>
-  <div class="col mt-2 mb-2 mr-3">
-    <div class="card-header">
-        <h2 class="card-title">Jane</h2>
-        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
-    </div>
-    <div class="card-body">
-        <ul class="list-group">
-        <li class="list-group-item">ID: 1122-3</li>
-        <li class="list-group-item">Email: <a href="mailto:int.jane@idk.com">int.jane@idk.com</a></li>
-        <li class="list-group-item">School: SmartPeople-School</li>
-        </ul>
-    </div>
-  </div>
-  <div class="col mt-2 mb-2 mr-3">
-    <div class="card-header">
-        <h2 class="card-title">Bethany</h2>
-        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
-    </div>
-    <div class="card-body">
-        <ul class="list-group">
-        <li class="list-group-item">ID: 1122-4</li>
-        <li class="list-group-item">Email: <a href="mailto:eng.bethany@idk.com">eng.bethany@idk.com</a></li>
-        <li class="list-group-item">GitHub: <a href="https://github.com/EngBethany-GH">EngBethany-GH</a></li>
-        </ul>
-    </div>
-  </div>
+            <div class="card-size">
+            <div class="col mt-2 mb-2 mr-3">
+                <div class="card-header">
+                    <h2 class="card-title">Managing Ed</h2>
+                    <h3 class="card-title"><i class="fas fa-tasks mr-2"></i>Manager</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                    <li class="list-group-item">ID: 1122</li>
+                    <li class="list-group-item">Email: <a href="mailto:mgr.ed@idk.com">mgr.ed@idk.com</a></li>
+                    <li class="list-group-item">Office number: 2211</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+            <div class="card-size">
+            <div class="col mt-2 mb-2 mr-3">
+                <div class="card-header">
+                    <h2 class="card-title">Ed</h2>
+                    <h3 class="card-title"><i class="fas fa-chalkboard-teacher mr-2"></i>Engineer</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                    <li class="list-group-item">ID: 1122-1</li>
+                    <li class="list-group-item">Email: <a href="mailto:eng.ed@idk.com">eng.ed@idk.com</a></li>
+                    <li class="list-group-item">GitHub: <a href="https://github.com/EngEd-GH">EngEd-GH</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+            <div class="card-size">
+            <div class="col mt-2 mb-2 mr-3">
+                <div class="card-header">
+                    <h2 class="card-title">James</h2>
+                    <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                    <li class="list-group-item">ID: 1122-2</li>
+                    <li class="list-group-item">Email: <a href="mailto:int.james@idk.com">int.james@idk.com</a></li>
+                    <li class="list-group-item">School: Engineers-School</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+            <div class="card-size">
+            <div class="col mt-2 mb-2 mr-3">
+                <div class="card-header">
+                    <h2 class="card-title">Jane</h2>
+                    <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                    <li class="list-group-item">ID: 1122-3</li>
+                    <li class="list-group-item">Email: <a href="mailto:int.jane@idk.com">int.jane@idk.com</a></li>
+                    <li class="list-group-item">School: SmartPeople-School</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            
+            <div class="card-size">
+            <div class="col mt-2 mb-2 mr-3">
+                <div class="card-header">
+                    <h2 class="card-title">Bethany</h2>
+                    <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                    <li class="list-group-item">ID: 1122-4</li>
+                    <li class="list-group-item">Email: <a href="mailto:eng.bethany@idk.com">eng.bethany@idk.com</a></li>
+                    <li class="list-group-item">GitHub: <a href="https://github.com/EngBethany-GH">EngBethany-GH</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
             
         </div>
                 
