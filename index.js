@@ -257,11 +257,6 @@ const runApp = () => {
     if ( !bError ) {
       createIndexHTML( finalTeam, bDebugging );
     }
-    // if ( !bError ) {
-    //   var sLicenseInfo = renderLicenseLink( data.prj_license,
-    //                                         data.prj_copyrightYear,
-    //                                         data.prj_copyrightName );
-    // }
   }
 
 };
